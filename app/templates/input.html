@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64569780-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kick Stronger</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../static/css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#slides">Slides</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Kick Stronger</h1>
+                        <p class="intro-text">Get the probability of your campaign's success<br>and actionable insights</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+
+            <h2>What are your campaign plans?</h2>
+            <p>Find out your odds of success on Kickstarter and how to improve your pitch.</p>
+
+
+            <form  action="/output" method="GET">
+            <div class="form-group">
+             
+                <label for="Goal">Goal ($)</label>
+                <input type="number" class="form-control" id="Goal" name="Goal" placeholder="4000" required="true" min="1" step="1">
+                
+                <label class="control-label" for="Category">Category</label>
+                  <select id="Category" name="Category" class="form-control">
+                    <option>art</option>
+                    <option>comics</option>
+                    <option>crafts</option>
+                    <option>dance</option>
+                    <option>design</option>
+                    <option>fashion</option>
+                    <option>film</option>
+                    <option>food</option>
+                    <option>games</option>
+                    <option>journalism</option>
+                    <option>music</option>
+                    <option>photography</option>
+                    <option>publishing</option>
+                    <option>technology</option>
+                    <option>theater</option>
+                  </select>
+             
+                <label for="N_body_words">Number of words in your project description </label>
+                <input type="number" class="form-control" id="N_body_words" name="N_body_words" placeholder="500" required="true" min="1" step="1">
+             
+                <label for="N_Rewards">Number of rewards</label>
+                <input type="number" class="form-control" id="N_Rewards" name="N_Rewards" placeholder="5" required="true" min="1" step="1">
+             
+                <label for="Min_reward">Minimum reward level ($)</label>
+                <input type="number" class="form-control" id="Min_reward" name="Min_reward" placeholder="1" required="true" min="0" step="1">
+             
+                <label for="Max_reward">Maximum reward level ($)</label>
+                <input type="number" class="form-control" id="Max_reward" name="Max_reward"placeholder="500" required="true" min="0" step="1">
+             
+                <label for="N_backed">Number of other campaigns you backed: </label>
+                <input type="number" class="form-control" id="N_backed" name="N_backed" placeholder="0" required="true" min="0" step="1">
+                
+            </div>
+
+            <br>
+        <div>
+          <button type="submit" class="btn btn-default btn-lg">Get insights!</button>
+        </div>
+
+      </form>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Slides Section -->
+    <section id="slides" class="content-section text-center">
+        <div class="slides-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Slides</h2>
+                    <p>Learn more about the project and predictive model.</p>
+                    <iframe src="http://www.slideshare.net/jkfitzg/slideshelf" width="615px" height="470px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact</h2>
+                <p>Feel feel to give feedback or just say hello!</p>
+                <p><a href="mailto:jkfitzg at post.harvard.edu">jkfitzg at post.harvard.edu</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                   
+                    <li>
+                        <a href="https://github.com/jkfitzg" class="btn btn-default btn-lg"><span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/jkfitzgerald" class="btn btn-default btn-lg"><span class="network-name">LinkedIn</span></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
+</html>
