@@ -33,7 +33,7 @@ def ModelIt(goal,n_backed,n_rewards,min_reward,max_reward,n_body_words,category)
 	X = np.hstack([X_pre,category_array])
 
 	# for local
-	#clf = joblib.load('/Users/jamie/insight_data/kickstarter/small_clf/clf.pkl')
+	# clf = joblib.load('/Users/jamie/insight_data/kickstarter/small_clf/clf.pkl')
 	
 	# for aws
 	clf = joblib.load('/home/ubuntu/app/small_clf/small_clf/clf.pkl')
@@ -46,7 +46,8 @@ def ModelIt(goal,n_backed,n_rewards,min_reward,max_reward,n_body_words,category)
 	advice4 = ''
 
 	if n_backed < 3:
-		advice1 = 'Consider backing other campaigns. You backed ' + str(n_backed) + \
+		advice1 = 'Consider backing other campaigns. This will get you involved in the Kickstarter community and '+\
+		'show you other campaigns. You backed ' + str(n_backed) + \
 				' campaigns, while successful campaigners backed a median of 3 campaigns.'
 
 	if n_rewards < 9:
