@@ -47,7 +47,7 @@ def ModelIt(goal,n_backed,n_rewards,min_reward,max_reward,n_body_words,category)
 
 	if n_backed < 3:
 		advice1 = 'Consider backing other campaigns. This will get you involved in the Kickstarter community and '+\
-		'show you other campaigns. You backed ' + str(n_backed) + \
+		'give you more experience with Kickstarter. You backed ' + str(n_backed) + \
 				' campaigns, while successful campaigners backed a median of 3 campaigns.'
 
 	if n_rewards < 9:
